@@ -1,10 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import { RiTodoFill, RiAddCircleFill } from "react-icons/ri";
 
-const TodoUI = ({ handleAddTodos }) => {
-  const [userTodo, setUserTodo] = useState("");
-
+const TodoUI = ({ handleAddTodos, userTodo, setUserTodo }) => {
   return (
     <header className="flex flex-col">
       <div className="flex justify-center items-center bg-indigo-400">
