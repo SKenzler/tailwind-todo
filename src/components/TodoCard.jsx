@@ -20,6 +20,7 @@ const TodoCard = ({
             className="flex justify-center items-center w-8 h-8 text-gray-50 bg-blue-500 rounded-md hover:bg-blue-950 transition-all ease-out duration-300 mx-1"
             onClick={() => {
               handleEditTodo(index);
+              setEditStatus(true);
             }}
           >
             <RiEditCircleFill size={14} color="#fff" />

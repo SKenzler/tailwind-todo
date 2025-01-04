@@ -10,8 +10,10 @@ function App() {
 
   const saveTodos = (newList) =>
     localStorage.setItem("todos", JSON.stringify({ todos: newList }));
+
   const handleAddTodos = (userTodo) => {
     const newTodos = [...todos, userTodo];
+    setEditStatus(false);
     saveTodos(newTodos);
     setTodos(newTodos);
   };
@@ -23,10 +25,11 @@ function App() {
   };
 
   const handleEditTodo = (index) => {
+    setEditStatus(true);
     const editValue = todos[index];
     setUserTodo(editValue);
     handleDeleteTodo(index);
-    setEditStatus(true);
+    console.log(editStatus);
   };
 
   useEffect(() => {
@@ -34,14 +37,14 @@ function App() {
       return;
     }
     let localTodos = localStorage.getItem("todos");
+
     if (!localTodos) {
       return;
     }
 
     localTodos = JSON.parse(localTodos).todos;
     setTodos(localTodos);
-  }),
-    [];
+  }, []);
 
   return (
     <>
@@ -49,6 +52,7 @@ function App() {
         userTodo={userTodo}
         setUserTodo={setUserTodo}
         handleAddTodos={handleAddTodos}
+        setEditStatus={setEditStatus}
       />
       <TodoList
         handleEditTodo={handleEditTodo}
