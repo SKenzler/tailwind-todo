@@ -1,10 +1,12 @@
 import TodoUI from "./components/TodoUI";
-import TodoCard from "./components/ToDoCard";
+import TodoList from "./components/TodoList";
+import "./index.css";
+
 function App() {
   return (
     <>
       <TodoUI />
-      <TodoCard />
+      <TodoList />
     </>
   );
 }
