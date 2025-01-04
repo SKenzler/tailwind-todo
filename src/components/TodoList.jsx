@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import TodoCard from "./ToDoCard";
 
-const TodoList = ({
-  todos,
-  handleDeleteTodo,
-  handleEditTodo,
-  editStatus,
-  setEditStatus,
-}) => {
+const TodoList = ({ todos, handleDeleteTodo, handleEditTodo }) => {
   return (
     <div className="flex justify-center items-center flex-col">
       <ul className="w-72 flex flex-col justify-start items-center">
@@ -18,8 +12,6 @@ const TodoList = ({
               todo={todo}
               handleDeleteTodo={handleDeleteTodo}
               handleEditTodo={handleEditTodo}
-              editStatus={editStatus}
-              setEditStatus={setEditStatus}
               index={todoIndex}
             />
           );
