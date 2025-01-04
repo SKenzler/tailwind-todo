@@ -1,7 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import { RiTodoFill, RiAddCircleFill } from "react-icons/ri";
 
-const TodoUI = () => {
+const TodoUI = ({ handleAddTodos }) => {
+  const [userTodo, setUserTodo] = useState("");
+
   return (
     <header className="flex flex-col">
       <div className="flex justify-center items-center bg-indigo-400">
@@ -18,12 +21,17 @@ const TodoUI = () => {
         <input
           type="text"
           placeholder="Add a task"
+          value={userTodo}
+          onChange={(e) => setUserTodo(e.target.value)}
           className="min-w-96 h-8 text-gray-400 text-lg font-normal border border-gray-400 rounded-md outline-none pl-2 placeholder:text-base tracking-normal m-4"
         />
         <button
           type="button"
           className="flex justify-center items-center w-8 h-8 text-gray-50 bg-blue-500 rounded-md hover:bg-blue-950 transition-all ease-out duration-300"
-          onClick={() => {}}
+          onClick={() => {
+            handleAddTodos(userTodo);
+            setUserTodo("");
+          }}
         >
           {" "}
           <RiAddCircleFill size={14} color="#fff" />
