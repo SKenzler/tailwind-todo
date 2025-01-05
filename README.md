@@ -6,7 +6,7 @@
 
 An interactive To Do List built using React and styled using Tailwind CSS. The Task Tracker dynamically populates as more tasks are added. The user cna also edit and delete tasks.
 
-[Live Demo](https://skenzler.github.io/react-to-do-list/)
+[Live Demo](https://skenzler.github.io/tailwind-todo)
 
 ## Built With
 
