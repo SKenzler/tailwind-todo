@@ -1,6 +1,6 @@
 # Tailwind To Do List
 
-![React Profile Card](/src/react-to-do-list-screenshot.jpg)
+![React Profile Card](/src/assets/tailwind-to-do-list-screenshot.png)
 
 ## About The Project
 

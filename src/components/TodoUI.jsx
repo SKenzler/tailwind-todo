@@ -4,14 +4,16 @@ import { RiTodoFill, RiAddCircleFill } from "react-icons/ri";
 const TodoUI = ({ handleAddTodos, userTodo, setUserTodo }) => {
   return (
     <header className="flex flex-col">
-      <div className="flex justify-center items-center bg-indigo-400">
-        <RiTodoFill size={18} color="#fff" />
-        <div className="text-gray-50 text-xl font-bold uppercase tracking-wide px-2 py-3">
-          Task Tracker
-        </div>
+      <div className="flex justify-center items-center bg-indigo-400 px-2">
+        <div className="w-[35em] flex justify-center items-center">
+          <RiTodoFill size={18} color="#fff" />
+          <div className="w-1/2 text-gray-50 text-lg sm:text-xl font-bold uppercase tracking-wide px-2 py-3">
+            Task Tracker
+          </div>
 
-        <div className="text-gray-50 text-lg font-normal tracking-normal p-2">
-          Add a <i>task</i> that you would like to complete
+          <div className="w-full text-center text-gray-50 textbase sm:text-lg font-normal tracking-normal p-2">
+            Add a <i>task</i> that you would like to complete
+          </div>
         </div>
       </div>
       <div className="flex justify-center items-center m-4">
