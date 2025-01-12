@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TodoCard from "./ToDoCard";
+import TodoCard from "./TodoCard";
 
 const TodoList = ({ todos, handleDeleteTodo, handleEditTodo }) => {
   return (

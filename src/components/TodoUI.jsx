@@ -26,7 +26,7 @@ const TodoUI = ({ handleAddTodos, userTodo, setUserTodo }) => {
         />
         <button
           type="button"
-          className="flex justify-center items-center w-8 h-8 text-gray-50 bg-blue-500 rounded-md hover:bg-blue-950 transition-all ease-out duration-300"
+          className="flex justify-center items-center w-8 h-8 appearance-none text-gray-50 bg-blue-500 rounded-md hover:bg-blue-950 transition-all ease-out duration-300"
           onClick={() => {
             handleAddTodos(userTodo);
             setUserTodo("");
